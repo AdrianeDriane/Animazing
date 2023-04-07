@@ -16,7 +16,7 @@ function App() {
     <div className="h-screen overflow-auto snap-y snap-mandatory bg-alabaster">
       <FirstPageSection
         innerRef={firstPageSectionRef}
-        isVisible={IsRefInView(firstPageSectionRef)}
+        isVisible={useInView(firstPageSectionRef)}
       />
       <CardsStackSection
         innerRef={cardsStackSectionRef}
