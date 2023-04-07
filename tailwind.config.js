@@ -12,6 +12,9 @@ module.exports = {
         royalPurple: '#7768AE',
         alabaster: '#E0DFD5',
       },
+      fontFamily: {
+        patrickHand: ['Patrick Hand', 'cursive'],
+      },
     },
   },
   plugins: [],

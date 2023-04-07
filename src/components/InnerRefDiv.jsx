@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function InnerRefDiv({ children, innerRef }) {
   return (
-    <div className="h-full w-full" ref={innerRef}>
+    <div className="h-1/4 w-full absolute" ref={innerRef}>
       {children}
     </div>
   );
