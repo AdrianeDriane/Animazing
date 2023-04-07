@@ -1,9 +1,9 @@
 import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 
 import CardsStackSection from './sections/CardsStack/CardsStackSection';
 import HamburgerMenuSection from './sections/HamburgerMenu/HamburgerMenuSection';
 import MacOSDockSection from './sections/MacOSDock/MacOSDockSection';
-import { IsRefInView } from './utils/IsRefInView';
 
 function App() {
   const cardsStackSectionRef = useRef();
@@ -14,15 +14,15 @@ function App() {
     <div className="h-screen overflow-auto snap-y snap-mandatory bg-alabaster">
       <CardsStackSection
         innerRef={cardsStackSectionRef}
-        isVisible={IsRefInView(cardsStackSectionRef)}
+        isVisible={useInView(cardsStackSectionRef)}
       />
       <HamburgerMenuSection
         innerRef={hamburgerMenuSectionRef}
-        isVisible={IsRefInView(hamburgerMenuSectionRef)}
+        isVisible={useInView(hamburgerMenuSectionRef)}
       />
       <MacOSDockSection
         innerRef={macOSDockSectionRef}
-        isVisible={IsRefInView(macOSDockSectionRef)}
+        isVisible={useInView(macOSDockSectionRef)}
       />
     </div>
   );
