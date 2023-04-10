@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Section({ children, color }) {
   return (
     <section
-      className={`${color} h-screen flex justify-center items-center p-10 snap-center shadow-2xl shadow-slate-600 rounded-3xl`}
+      className={`${color} h-screen flex justify-center items-center p-10 snap-center shadow-2xl shadow-slate-600`}
     >
       {children}
     </section>
