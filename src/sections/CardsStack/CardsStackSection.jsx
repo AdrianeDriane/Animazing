@@ -4,19 +4,26 @@ import { useState } from 'react';
 
 import Section from '../../templates/Section';
 
+import ace from '../../assets/card_images/ace.png';
+import eight_clubs from '../../assets/card_images/eight_clubs.png';
+import eight_spades from '../../assets/card_images/eight_spades.png';
+import king_diamonds from '../../assets/card_images/king_diamonds.png';
+import queen_diamonds from '../../assets/card_images/queen_diamonds.png';
+import unflipped_card from '../../assets/card_images/unflipped_card.png';
+
 const CARD_OFFSET = 10;
 const SCALE_FACTOR = 0.06;
-const CARD_COLORS = [
-  '#7FB285',
-  '#A790A5',
-  '#8DE4FF',
-  '#E5E8B6',
-  '#272635',
-  '#EBBAB9',
+const CARD_IMAGES = [
+  ace,
+  king_diamonds,
+  queen_diamonds,
+  eight_clubs,
+  eight_spades,
+  unflipped_card,
 ];
 
 function CardStackSection() {
-  const [cards, setCards] = useState(CARD_COLORS);
+  const [cards, setCards] = useState(CARD_IMAGES);
 
   const moveToEnd = (from) => {
     const newCards = cards.slice();
@@ -27,16 +34,14 @@ function CardStackSection() {
 
   return (
     <Section color="bg-celestialBlue">
-      <div style={wrapperStyle}>
-        <ul style={cardWrapStyle}>
-          {cards.map((color, index) => {
+      <div className="relative flex items-center justify-center h-screen">
+        <ul className="relative w-cardWidth h-cardHeight">
+          {cards.map((image, index) => {
             return (
               <motion.li
-                key={color}
+                key={image}
                 style={{
-                  ...cardStyle,
-                  backgroundColor: color,
-                  cursor: 'grab',
+                  backgroundImage: `url(${image})`,
                 }}
                 animate={{
                   top: index * -CARD_OFFSET,
@@ -50,7 +55,9 @@ function CardStackSection() {
                   bottom: 0,
                 }}
                 onDragEnd={() => moveToEnd(index)}
-                className="shadow-2xl"
+                className="absolute w-cardWidth h-cardHeight rounded-lg origin-top-center 
+                list-none bg-no-repeat bg-center bg-cardBgColor 
+                cursor-grab shadow-2xl shadow-slate-600"
               />
             );
           })}
@@ -59,28 +66,5 @@ function CardStackSection() {
     </Section>
   );
 }
-
-const wrapperStyle = {
-  position: 'relative',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: '100vh',
-};
-
-const cardWrapStyle = {
-  position: 'relative',
-  width: '220px',
-  height: '350px',
-};
-
-const cardStyle = {
-  position: 'absolute',
-  width: '220px',
-  height: '350px',
-  borderRadius: '8px',
-  transformOrigin: 'top center',
-  listStyle: 'none',
-};
 
 export default CardStackSection;
