@@ -4,12 +4,12 @@ import { useState } from 'react';
 
 import Section from '../../templates/Section';
 
-import ace from '../../assets/card_images/ace.png';
-import eight_clubs from '../../assets/card_images/eight_clubs.png';
-import eight_spades from '../../assets/card_images/eight_spades.png';
-import king_diamonds from '../../assets/card_images/king_diamonds.png';
-import queen_diamonds from '../../assets/card_images/queen_diamonds.png';
-import unflipped_card from '../../assets/card_images/unflipped_card.png';
+import ace from './assets/card_images/ace.png';
+import eight_clubs from './assets/card_images/eight_clubs.png';
+import eight_spades from './assets/card_images/eight_spades.png';
+import king_diamonds from './assets/card_images/king_diamonds.png';
+import queen_diamonds from './assets/card_images/queen_diamonds.png';
+import unflipped_card from './assets/card_images/unflipped_card.png';
 
 const CARD_OFFSET = 10;
 const SCALE_FACTOR = 0.06;
