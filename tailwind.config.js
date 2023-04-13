@@ -24,6 +24,7 @@ module.exports = {
       },
       height: {
         cardHeight: '350px',
+        dockHeight: '50px',
       },
       width: {
         cardWidth: '224px',

@@ -29,20 +29,20 @@ export default function Dock() {
 
   return (
     <MouseProvider>
-      <div className="relative inset-x-0 bottom-4 z-40 flex justify-center">
+      <div className="relative inset-x-0 z-40 flex justify-center">
         <div className="flex w-full justify-center">
           <DockContext.Provider value={{ hovered, width }}>
             <nav
               ref={ref}
-              className="flex justify-center rounded-macos bg-zinc-900 py-3 px-4 ring-1 ring-zinc-700/70 rounded-lg"
+              className="flex justify-center rounded-macos bg-macOSBg py-3 px-4 ring-1 ring-macOSBorder rounded-lg"
               onMouseOver={() => setHovered(true)}
               onMouseOut={() => setHovered(false)}
             >
-              <ul className="flex h-10 items-end justify-center space-x-3">
+              <ul className="flex h-dockHeight items-end justify-center space-x-3">
                 {dockItems}
 
                 <li className="self-center" aria-hidden="true">
-                  <hr className="!mx-2 block h-8 w-px border-none bg-white/10" />
+                  <hr className="!mx-2 block h-10 w-px border-none bg-macOSBorder" />
                 </li>
                 <DockItem
                   id="dock-item-twitter"
