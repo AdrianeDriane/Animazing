@@ -1,26 +1,15 @@
 import { createContext, useContext, useMemo } from 'react';
 import { useEvent } from 'react-use';
 import { useMotionValue, useVelocity } from 'framer-motion';
-
-const useMousePosition = () => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  useEvent('mousemove', (e) => {
-    x.set(e.clientX);
-    y.set(e.clientY);
-  });
-
-  return useMemo(() => ({ x, y }), [x, y]);
-};
+import PropTypes from 'prop-types';
 
 const MouseContext = createContext(null);
 
-export const useMouse = () => {
+export function useMouse() {
   return useContext(MouseContext);
-};
+}
 
-export const MouseProvider = ({ children }) => {
+export function MouseProvider({ children }) {
   const { x, y } = useMousePosition();
   const velocityX = useVelocity(x);
   const velocityY = useVelocity(y);
@@ -36,4 +25,20 @@ export const MouseProvider = ({ children }) => {
   return (
     <MouseContext.Provider value={mouse}>{children}</MouseContext.Provider>
   );
+}
+
+function useMousePosition() {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  useEvent('mousemove', (e) => {
+    x.set(e.clientX);
+    y.set(e.clientY);
+  });
+
+  return useMemo(() => ({ x, y }), [x, y]);
+}
+
+MouseProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
