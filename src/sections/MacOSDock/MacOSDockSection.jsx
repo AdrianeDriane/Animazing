@@ -4,7 +4,7 @@ import Dock from './dock/Dock';
 
 function MacOSDockSection() {
   return (
-    <Section color={'bg-macOSBg'}>
+    <Section color={'bg-macOSBg'} align={'items-end'}>
       <Dock />
     </Section>
   );
