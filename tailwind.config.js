@@ -12,6 +12,8 @@ module.exports = {
         royalPurple: '#7768AE',
         alabaster: '#E0DFD5',
         cardBgColor: '#F0ECEC',
+        canvaBlue: '#05ABE0',
+        canvaPurple: '#8200F4',
 
         macOSBg: '#0D1117',
         macOSDockItems: '#161B22',

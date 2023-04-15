@@ -5,11 +5,11 @@ import MacOSDockSection from './sections/MacOSDock/MacOSDockSection';
 
 function App() {
   return (
-    <div className="h-screen overflow-auto snap-y snap-mandatory bg-alabaster">
+    <div className="h-screen overflow-auto snap-y snap-mandatory">
       <FirstPageSection />
       <MacOSDockSection />
-      <CardsStackSection />
       <HamburgerMenuSection />
+      <CardsStackSection />
     </div>
   );
 }
