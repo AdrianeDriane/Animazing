@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../../templates/Section';
-import HamburgerNavigation from './HamburgerMenu/HamburgerMenuNav';
+import HamburgerMenuNav from './HamburgerMenu/HamburgerMenuNav';
 
 function HamburgerMenuSection() {
   return (
@@ -10,7 +10,7 @@ function HamburgerMenuSection() {
       align={'align-center'}
       justify={'justify-start'}
     >
-      <HamburgerNavigation />
+      <HamburgerMenuNav />
     </Section>
   );
 }

@@ -10,12 +10,10 @@ export default function HamburgerMenuNav() {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
-  console.log(isOpen);
-
   return (
     <motion.nav
       className="relative top-0 left-0 bottom-0 w-full h-full flex items-center justify-center"
-      animate={isOpen ? 'open' : 'closed'}
+      animate={isOpen ? 'open' : 'close'}
       custom={height}
       ref={containerRef}
     >
@@ -26,8 +24,8 @@ export default function HamburgerMenuNav() {
       ></motion.div>
       <Navigation />
       <HamburgerIcon
+        isOpen={isOpen}
         toggle={() => {
-          console.log('toggleIsOpen is called');
           toggleIsOpen();
         }}
       />

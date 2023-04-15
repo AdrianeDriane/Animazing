@@ -7,7 +7,7 @@ export const navigationItemVariants = {
       delay: 1,
     },
   },
-  closed: {
+  close: {
     y: 50,
     opacity: 0,
     transition: {
