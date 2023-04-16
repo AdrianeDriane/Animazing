@@ -15,8 +15,6 @@ export const hamburgerMenuNavVariants = {
       stiffness: 400,
       damping: 40,
     },
-  },
-  hidden: {
     opacity: 0,
   },
 };

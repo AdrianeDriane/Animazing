@@ -30,6 +30,7 @@ module.exports = {
       },
       width: {
         cardWidth: '224px',
+        navigationMenuWidth: '500px',
       },
       transformOrigin: {
         'top-center': 'top center',

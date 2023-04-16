@@ -4,7 +4,6 @@ export const navigationItemVariants = {
     opacity: 1,
     transition: {
       y: { stiffness: 1000, velocity: -100 },
-      delay: 1,
     },
   },
   close: {
