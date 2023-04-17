@@ -44,8 +44,12 @@ export default function Dock() {
                 <li className="self-center" aria-hidden="true">
                   <hr className="!mx-2 block h-10 w-px border-none bg-macOSBorder" />
                 </li>
-                <DockItem onClick={(e) => openLink(e, 'https://twitter.com/')}>
-                  <DockIcon name="Twitter" />
+                <DockItem
+                  onClick={(e) =>
+                    openLink(e, 'https://www.facebook.com/drian4the3/')
+                  }
+                >
+                  <DockIcon name="Facebook" />
                 </DockItem>
                 <DockItem
                   onClick={(e) =>

@@ -26,15 +26,15 @@ export default function NavigationItem({ text }) {
       whileTap={{ scale: 0.9 }}
       className="m-0 p-0 list-none mb-5 flex items-center cursor-pointer"
     >
-      <div className="flex items-center justify-start">
+      <motion.div
+        className="flex items-center justify-start pl-10"
+        whileHover={{ x: 40, fontStyle: 'italic' }}
+      >
         {iconBasedOnText(text)}
-        <motion.h1
-          className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-canvaBlue to-canvaPurple font-semibold font-sans"
-          whileHover={{ x: 40, fontStyle: 'italic' }}
-        >
+        <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-canvaBlue to-canvaPurple font-semibold font-sans">
           {text}
-        </motion.h1>
-      </div>
+        </h1>
+      </motion.div>
     </motion.li>
   );
 }

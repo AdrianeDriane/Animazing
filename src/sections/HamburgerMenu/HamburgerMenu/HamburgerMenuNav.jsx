@@ -12,13 +12,13 @@ export default function HamburgerMenuNav() {
 
   return (
     <motion.nav
-      className="relative top-0 left-0 bottom-0 w-navigationMenuWidth h-full flex items-start justify-center pt-40"
+      className="relative top-0 left-0 bottom-0 w-4/5 h-full flex items-start justify-center pt-40"
       animate={isOpen ? 'open' : 'close'}
       custom={height}
       ref={containerRef}
     >
       <motion.div
-        className="absolute top-0 left-0 bottom-0 w-full bg-white h-full"
+        className="absolute top-0 left-0 bottom-0 w-full bg-white h-full rounded-2xl"
         variants={hamburgerMenuNavVariants}
         animate={isOpen ? 'open' : 'close'}
       ></motion.div>

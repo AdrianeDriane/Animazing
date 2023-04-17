@@ -27,10 +27,12 @@ module.exports = {
       height: {
         cardHeight: '350px',
         dockHeight: '50px',
+        mobileHeight: '800px',
       },
       width: {
         cardWidth: '224px',
         navigationMenuWidth: '500px',
+        mobileWidth: '450px',
       },
       transformOrigin: {
         'top-center': 'top center',
