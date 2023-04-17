@@ -4,14 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        yinMnBlue: '#465775',
-        creamBeige: '#FFFECB',
-        timberWolfWhite: '#D7CDCC',
-        fairyTalePink: '#EBC3DB',
-        celestialBlue: '#4D9DE0',
         royalPurple: '#7768AE',
-        alabaster: '#E0DFD5',
+
         cardBgColor: '#F0ECEC',
+
         canvaBlue: '#05ABE0',
         canvaPurple: '#8200F4',
 
@@ -20,6 +16,13 @@ module.exports = {
         macOSClickedDockItem: '#238636',
         macOSIcons: '#2F81F7',
         macOSBorder: '#30363D',
+
+        spotifyGreen: '#1DB954',
+        spotifyLightGreen: '#1ED760',
+        spotifyWhite: '#FFFFFF',
+        spotifyBlack: '#121212',
+        spotifyGray: '#535353',
+        spotifyLightGray: '#B3B3B3',
       },
       fontFamily: {
         patrickHand: ['Patrick Hand', 'cursive'],
