@@ -33,7 +33,7 @@ function CardStackSection() {
   };
 
   return (
-    <Section color="bg-celestialBlue">
+    <Section color="bg-royalPurple">
       <div className="relative flex items-center justify-center h-screen">
         <ul className="relative w-cardWidth h-cardHeight">
           {cards.map((image, index) => {

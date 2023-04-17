@@ -18,9 +18,9 @@ export default function HamburgerIcon({ isOpen, toggle }) {
       onClick={toggle}
       className={`${
         isOpen ? 'bg-opacity-0' : 'bg-opacity-100'
-      } outline-none border-none select-none cursor-pointer absolute top-10 left-10 w-16 h-16 rounded-full bg-opac bg-white flex items-center justify-center z-10`}
+      } outline-none border-none select-none cursor-pointer absolute top-5 left-5 w-14 h-14 rounded-full bg-opac bg-white flex items-center justify-center z-10`}
     >
-      <svg width="35" height="35" viewBox="0 0 23 23">
+      <svg width="30" height="30" viewBox="0 0 23 23">
         <Path
           variants={{
             close: { d: 'M 2 2.5 L 20 2.5' },
