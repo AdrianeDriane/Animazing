@@ -10,10 +10,10 @@ function App() {
     <div className="h-screen overflow-auto snap-y snap-mandatory">
       <Github />
       <MacOSDockSection />
-      <ElasticSwitchTabSection />
-      <CardsStackSection />
       <HamburgerMenuSection />
       <BoxStackSection />
+      <ElasticSwitchTabSection />
+      <CardsStackSection />
     </div>
   );
 }
