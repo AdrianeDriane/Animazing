@@ -3,17 +3,17 @@ import HamburgerMenuSection from './sections/HamburgerMenu/HamburgerMenuSection'
 import MacOSDockSection from './sections/MacOSDock/MacOSDockSection';
 import Github from './components/Github';
 import ElasticSwitchTabSection from './sections/ElasticSwitchTab/ElasticSwitchTabSection';
-import PageSwipeSection from './sections/PageSwipe/PageSwipeSection';
+import BoxStackSection from './sections/BoxStack/BoxStackSection';
 
 function App() {
   return (
     <div className="h-screen overflow-auto snap-y snap-mandatory">
       <Github />
       <MacOSDockSection />
-      <HamburgerMenuSection />
-      <PageSwipeSection />
       <ElasticSwitchTabSection />
       <CardsStackSection />
+      <HamburgerMenuSection />
+      <BoxStackSection />
     </div>
   );
 }
