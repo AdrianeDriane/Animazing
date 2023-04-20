@@ -23,6 +23,13 @@ module.exports = {
         spotifyBlack: '#121212',
         spotifyGray: '#535353',
         spotifyLightGray: '#B3B3B3',
+
+        easterBlue: '#A8D8EA',
+        easterPurple: '#AA96DA',
+        easterPink: '#FCBAD3',
+        easterYellow: '#FFFFD2',
+        easterGreen: '#AEDDCD',
+        easterWhite: '#F9F9F9',
       },
       fontFamily: {
         patrickHand: ['Patrick Hand', 'cursive'],
@@ -39,6 +46,9 @@ module.exports = {
       },
       transformOrigin: {
         'top-center': 'top center',
+      },
+      borderWidth: {
+        mobileBorderWidth: '10px',
       },
     },
   },
