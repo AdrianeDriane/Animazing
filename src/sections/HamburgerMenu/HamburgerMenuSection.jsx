@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../../templates/Section';
-import HamburgerMenuNav from './HamburgerMenu/HamburgerMenuNav';
+import HamburgerMenuNav from './HamburgerMenuComponents/HamburgerMenuNav';
 import Mobile from '../../templates/Mobile';
 
 function HamburgerMenuSection() {

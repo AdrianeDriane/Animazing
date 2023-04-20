@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Mobile({ children }) {
+export default function Mobile({ children, color }) {
   return (
-    <div className="border-8 z-10 rounded-3xl h-mobileHeight w-mobileWidth shadow-2xl shadow-slate-800">
+    <div
+      className={`${color} border-mobileBorderWidth z-10 rounded-3xl h-mobileHeight w-mobileWidth shadow-2xl shadow-slate-800 overflow-hidden`}
+    >
       {children}
     </div>
   );
@@ -11,4 +13,5 @@ export default function Mobile({ children }) {
 
 Mobile.propTypes = {
   children: PropTypes.node,
+  color: PropTypes.string,
 };

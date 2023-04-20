@@ -22,7 +22,7 @@ const CARD_IMAGES = [
   unflipped_card,
 ];
 
-function CardStackSection() {
+function CardsStackSection() {
   const [cards, setCards] = useState(CARD_IMAGES);
 
   const moveToEnd = (from) => {
@@ -67,4 +67,4 @@ function CardStackSection() {
   );
 }
 
-export default CardStackSection;
+export default CardsStackSection;

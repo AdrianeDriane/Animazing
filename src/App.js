@@ -3,6 +3,7 @@ import HamburgerMenuSection from './sections/HamburgerMenu/HamburgerMenuSection'
 import MacOSDockSection from './sections/MacOSDock/MacOSDockSection';
 import Github from './components/Github';
 import ElasticSwitchTabSection from './sections/ElasticSwitchTab/ElasticSwitchTabSection';
+import PageSwipeSection from './sections/PageSwipe/PageSwipeSection';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Github />
       <MacOSDockSection />
       <HamburgerMenuSection />
+      <PageSwipeSection />
       <ElasticSwitchTabSection />
       <CardsStackSection />
     </div>
