@@ -30,6 +30,8 @@ module.exports = {
         easterYellow: '#FFFFD2',
         easterGreen: '#AEDDCD',
         easterWhite: '#F9F9F9',
+
+        boundingRoundedBox: '#202E4E',
       },
       fontFamily: {
         patrickHand: ['Patrick Hand', 'cursive'],
@@ -37,18 +39,21 @@ module.exports = {
       height: {
         cardHeight: '350px',
         dockHeight: '50px',
-        mobileHeight: '800px',
+        mobileHeight: '750px',
       },
       width: {
         cardWidth: '224px',
         navigationMenuWidth: '500px',
-        mobileWidth: '450px',
+        mobileWidth: '400px',
       },
       transformOrigin: {
         'top-center': 'top center',
       },
       borderWidth: {
         mobileBorderWidth: '10px',
+      },
+      borderRadius: {
+        mobileRound: '70px',
       },
     },
   },
