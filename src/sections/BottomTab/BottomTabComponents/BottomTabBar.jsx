@@ -11,7 +11,6 @@ const tabs = [
 ];
 
 export default function BottomTabBar({ isTabSelected, setIsTabSelected }) {
-  console.log(isTabSelected);
   const boundingRoundedBox = useMemo(
     () => (
       <img
