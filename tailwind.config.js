@@ -39,7 +39,7 @@ module.exports = {
       height: {
         cardHeight: '350px',
         dockHeight: '50px',
-        mobileHeight: '750px',
+        mobileHeight: '650px',
       },
       width: {
         cardWidth: '224px',
