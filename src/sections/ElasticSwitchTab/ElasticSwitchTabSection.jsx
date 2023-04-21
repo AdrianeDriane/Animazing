@@ -1,8 +1,8 @@
 import React from 'react';
-import Section from '../../templates/Section';
+import Section from '../../templates/Section.jsx';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import TabIcons from './TabIcons';
+import TabIcons from './TabIcons.jsx';
 
 const tabs = [
   { name: 'Home' },

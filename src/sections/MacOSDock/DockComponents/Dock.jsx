@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
-import { MouseProvider } from '../mouse/MouseProvider';
-import DockItem from './DockItem';
-import DockIcon from './DockIcon';
+import { MouseProvider } from '../mouse/MouseProvider.jsx';
+import DockItem from './DockItem.jsx';
+import DockIcon from './DockIcon.jsx';
 
 const DockContext = createContext(null);
 

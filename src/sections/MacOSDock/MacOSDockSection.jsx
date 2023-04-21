@@ -1,6 +1,6 @@
 import React from 'react';
-import Section from '../../templates/Section';
-import Dock from './DockComponents/Dock';
+import Section from '../../templates/Section.jsx';
+import Dock from './DockComponents/Dock.jsx';
 
 function MacOSDockSection() {
   return (

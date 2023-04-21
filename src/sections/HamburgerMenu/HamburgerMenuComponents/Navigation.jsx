@@ -1,7 +1,7 @@
 import React from 'react';
-import { navigationVariants } from '../utils/navigationVariants';
+import { navigationVariants } from '../utils/navigationVariants.js';
 import { motion } from 'framer-motion';
-import NavigationItem from './NavigationItem';
+import NavigationItem from './NavigationItem.jsx';
 
 export default function Navigation() {
   return (

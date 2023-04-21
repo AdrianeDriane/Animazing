@@ -6,8 +6,8 @@ import {
   useTransform,
   useAnimationControls,
 } from 'framer-motion';
-import { useMouse } from '../mouse/MouseProvider';
-import { useDock } from './Dock';
+import { useMouse } from '../mouse/MouseProvider.jsx';
+import { useDock } from './Dock.jsx';
 import PropTypes from 'prop-types';
 
 const DOCK_ITEM_SIZE = 50;

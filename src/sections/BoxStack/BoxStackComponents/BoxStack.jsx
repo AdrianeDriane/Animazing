@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import BoxCard from './BoxCard';
+import BoxCard from './BoxCard.jsx';
 
 export default function BoxStack() {
   const [index, setIndex] = useState(0);

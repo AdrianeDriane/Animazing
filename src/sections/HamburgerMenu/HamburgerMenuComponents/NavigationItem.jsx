@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { navigationItemVariants } from '../utils/navigationItemVariants';
+import { navigationItemVariants } from '../utils/navigationItemVariants.js';
 import PropTypes from 'prop-types';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { AiOutlineMessage } from 'react-icons/ai';

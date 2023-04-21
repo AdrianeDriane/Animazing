@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-import Section from '../../templates/Section';
+import Section from '../../templates/Section.jsx';
 
 import ace from './assets/card_images/ace.png';
 import eight_clubs from './assets/card_images/eight_clubs.png';

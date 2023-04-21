@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Section from '../../templates/Section';
-import Mobile from '../../templates/Mobile';
-import BottomTabBar from './BottomTabComponents/BottomTabBar';
+import Section from '../../templates/Section.jsx';
+import Mobile from '../../templates/Mobile.jsx';
+import BottomTabBar from './BottomTabComponents/BottomTabBar.jsx';
 
 export default function BottomTabSection() {
   const [isTabSelected, setIsTabSelected] = useState(0);

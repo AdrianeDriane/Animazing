@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from '../../templates/Section';
-import Mobile from '../../templates/Mobile';
-import BoxStack from './BoxStackComponents/BoxStack';
+import Section from '../../templates/Section.jsx';
+import Mobile from '../../templates/Mobile.jsx';
+import BoxStack from './BoxStackComponents/BoxStack.jsx';
 
 export default function BoxStackSection() {
   return (

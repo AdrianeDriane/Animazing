@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { motion, useCycle } from 'framer-motion';
-import { hamburgerMenuNavVariants } from '../utils/hamburgerMenuNavVariants';
-import { useDimensions } from '../utils/useDimensions';
-import Navigation from './Navigation';
-import HamburgerIcon from './HamburgerIcon';
+import { hamburgerMenuNavVariants } from '../utils/hamburgerMenuNavVariants.js';
+import { useDimensions } from '../utils/useDimensions.js';
+import Navigation from './Navigation.jsx';
+import HamburgerIcon from './HamburgerIcon.jsx';
 
 export default function HamburgerMenuNav() {
   const [isOpen, toggleIsOpen] = useCycle(false, true);

@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import bell_curve from '../assets/bell_curve.png';
-import TabIcons from '../../ElasticSwitchTab/TabIcons';
+import TabIcons from '../../ElasticSwitchTab/TabIcons.jsx';
 
 const tabs = [
   { name: 'Home', color: '#FCBAD3' },
