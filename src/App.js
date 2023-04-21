@@ -4,6 +4,7 @@ import MacOSDockSection from './sections/MacOSDock/MacOSDockSection';
 import Github from './components/Github';
 import ElasticSwitchTabSection from './sections/ElasticSwitchTab/ElasticSwitchTabSection';
 import BoxStackSection from './sections/BoxStack/BoxStackSection';
+import BottomTabSection from './sections/BottomTab/BottomTabSection';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Github />
       <MacOSDockSection />
       <HamburgerMenuSection />
+      <BottomTabSection />
       <BoxStackSection />
       <ElasticSwitchTabSection />
       <CardsStackSection />
