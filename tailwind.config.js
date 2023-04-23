@@ -34,7 +34,7 @@ module.exports = {
         boundingRoundedBox: '#202E4E',
       },
       fontFamily: {
-        patrickHand: ['Patrick Hand', 'cursive'],
+        spaceMono: ['Space Mono', 'monospace'],
       },
       height: {
         cardHeight: '350px',
