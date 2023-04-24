@@ -10,13 +10,13 @@ export default function NavigationItem({ text }) {
   function iconBasedOnText(text) {
     text = text.toLowerCase();
     if (text === 'home') {
-      return <BiHomeAlt2 size={35} className="mr-10 " />;
+      return <BiHomeAlt2 size={30} className="mr-10 " />;
     } else if (text === 'inbox') {
-      return <AiOutlineMessage size={35} className="mr-10" />;
+      return <AiOutlineMessage size={30} className="mr-10" />;
     } else if (text === 'contact') {
-      return <FiMail size={35} className="mr-10" />;
+      return <FiMail size={30} className="mr-10" />;
     } else if (text === 'about') {
-      return <RxPerson size={35} className="mr-10" />;
+      return <RxPerson size={30} className="mr-10" />;
     }
   }
 
@@ -31,9 +31,9 @@ export default function NavigationItem({ text }) {
         whileHover={{ x: 40, fontStyle: 'italic' }}
       >
         {iconBasedOnText(text)}
-        <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-canvaBlue to-canvaPurple font-semibold font-sans">
+        <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-canvaBlue to-canvaPurple font-semibold font-sans sm:text-3xl">
           {text}
-        </h1>
+        </h2>
       </motion.div>
     </motion.li>
   );

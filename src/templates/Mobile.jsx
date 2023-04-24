@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function Mobile({ children, color, align, justify }) {
   return (
     <div
-      className={`${color} flex ${align} ${justify} border-mobileBorderWidth z-10 rounded-mobileRound h-mobileHeight w-mobileWidth shadow-2xl shadow-slate-800 overflow-hidden`}
+      className={`${color} flex ${align} ${justify} z-10 shadow-2xl shadow-slate-800 overflow-hidden h-full w-full rounded-none sm:border-mobileBorderWidth sm:h-mobileHeight sm:w-mobileWidth sm:rounded-mobileRound`}
     >
       {children}
     </div>

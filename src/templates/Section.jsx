@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Section({ children, color, align, justify, padding }) {
+function Section({ children, color, align, justify }) {
   return (
     <section
-      className={`${color} snap-center h-screen flex ${justify} ${align} ${padding} shadow-2xl shadow-slate-600 overflow-hidden`}
+      className={`${color} snap-center h-screen flex ${justify} ${align} p-0 shadow-2xl shadow-slate-600 overflow-hidden`}
     >
       {children}
     </section>
@@ -16,13 +16,11 @@ Section.propTypes = {
   color: PropTypes.string,
   align: PropTypes.string,
   justify: PropTypes.string,
-  padding: PropTypes.string,
 };
 
 Section.defaultProps = {
   align: 'items-center',
   justify: 'justify-center',
-  padding: 'p-10',
 };
 
 export default Section;

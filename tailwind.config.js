@@ -44,7 +44,7 @@ module.exports = {
       width: {
         cardWidth: '224px',
         navigationMenuWidth: '500px',
-        mobileWidth: '400px',
+        mobileWidth: '385px',
       },
       transformOrigin: {
         'top-center': 'top center',
@@ -53,7 +53,7 @@ module.exports = {
         mobileBorderWidth: '10px',
       },
       borderRadius: {
-        mobileRound: '70px',
+        mobileRound: '50px',
       },
     },
   },

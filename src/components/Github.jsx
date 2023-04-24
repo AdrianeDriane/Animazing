@@ -8,7 +8,11 @@ export default function Github() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <AiFillGithub className="fixed top-10 right-16" size={50} color="white" />
+      <AiFillGithub
+        className="fixed top-10 right-16 hidden sm:inline"
+        size={50}
+        color="white"
+      />
     </a>
   );
 }

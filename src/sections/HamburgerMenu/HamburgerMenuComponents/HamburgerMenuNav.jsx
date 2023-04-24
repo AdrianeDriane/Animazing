@@ -12,16 +12,16 @@ export default function HamburgerMenuNav() {
 
   return (
     <motion.nav
-      className="relative top-0 left-0 bottom-0 w-4/5 h-full flex items-start justify-center pt-40"
+      className="relative top-0 left-0 bottom-0 w-4/5 h-full flex items-start justify-center pt-20"
       animate={isOpen ? 'open' : 'close'}
       custom={height}
       ref={containerRef}
     >
       <motion.div
-        className="absolute top-0 left-0 bottom-0 w-full bg-white h-full rounded-2xl"
+        className="absolute top-0 left-0 bottom-0 w-full bg-white h-full rounded-r-2xl"
         variants={hamburgerMenuNavVariants}
         animate={isOpen ? 'open' : 'close'}
-      ></motion.div>
+      />
       <Navigation />
       <HamburgerIcon
         isOpen={isOpen}

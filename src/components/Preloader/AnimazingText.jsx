@@ -26,13 +26,15 @@ export default function AnimazingText() {
 
       if (iterations >= textValue.length) clearInterval(interval);
 
-      iterations += 1 / 3;
+      iterations += 1 / 8;
     }, 30);
 
     return () => clearInterval(interval);
   }, [textValue]);
 
   return (
-    <h1 className="text-spotifyWhite text-4xl font-spaceMono">{hackedText}</h1>
+    <h1 className="text-spotifyWhite text-4xl font-spaceMono sm:text-5xl">
+      {hackedText}
+    </h1>
   );
 }

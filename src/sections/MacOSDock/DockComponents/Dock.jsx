@@ -23,23 +23,32 @@ export default function Dock() {
     setWidth(ref.current.clientWidth);
   }, []);
 
-  const dockItems = Array.from({ length: 8 }, (_, index) => (
+  const dockItemsDesktop = Array.from({ length: 8 }, (_, index) => (
+    <DockItem key={index} />
+  ));
+
+  const dockItemsMobile = Array.from({ length: 4 }, (_, index) => (
     <DockItem key={index} />
   ));
 
   return (
     <MouseProvider>
-      <div className="relative inset-x-0 z-10 flex justify-center">
+      <div className="relative inset-x-0 z-10 flex justify-center pb-10">
         <div className="flex w-full justify-center">
           <DockContext.Provider value={{ isHovered, width }}>
             <nav
               ref={ref}
-              className="flex justify-center rounded-macos bg-macOSBg py-4 px-4 ring-1 ring-macOSBorder rounded-lg"
+              className="flex justify-center rounded-macos bg-macOSBg py-4 px-4 ring-1 ring-macOSBorder rounded-3xl"
               onMouseOver={() => setIsHovered(true)}
               onMouseOut={() => setIsHovered(false)}
             >
               <ul className="flex h-dockHeight items-end justify-center space-x-3">
-                {dockItems}
+                <div className="hidden h-dockHeight items-end justify-center space-x-3 sm:flex">
+                  {dockItemsDesktop}
+                </div>
+                <div className="flex h-dockHeight items-end justify-center space-x-3 sm:hidden">
+                  {dockItemsMobile}
+                </div>
 
                 <li className="self-center" aria-hidden="true">
                   <hr className="!mx-2 block h-10 w-px border-none bg-macOSBorder" />

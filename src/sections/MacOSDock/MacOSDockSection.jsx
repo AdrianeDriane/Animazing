@@ -5,7 +5,14 @@ import Dock from './DockComponents/Dock.jsx';
 function MacOSDockSection() {
   return (
     <Section color={'bg-macOSBg'} align={'items-end'}>
-      <Dock />
+      <div className="flex flex-col h-full w-full items-center justify-end">
+        <div className="p-48 inline sm:hidden">
+          <h1 className="font-spaceMono  text-xl w-60 text-center text-spotifyWhite">
+            THIS ANIMATION CAN BE PROPERLY ENJOYED WITH A HOVERING MOUSE!
+          </h1>
+        </div>
+        <Dock />
+      </div>
     </Section>
   );
 }
