@@ -29,7 +29,7 @@ export default function Dock() {
 
   return (
     <MouseProvider>
-      <div className="relative inset-x-0 z-40 flex justify-center">
+      <div className="relative inset-x-0 z-10 flex justify-center">
         <div className="flex w-full justify-center">
           <DockContext.Provider value={{ isHovered, width }}>
             <nav
