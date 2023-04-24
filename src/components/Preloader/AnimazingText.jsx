@@ -1,0 +1,38 @@
+import React, { useEffect, useState } from 'react';
+
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+export default function AnimazingText() {
+  const [hackedText, setHackedText] = useState('ANIMAZING');
+  const textValue = 'ANIMAZING';
+
+  useEffect(() => {
+    let interval = null;
+    let iterations = 0;
+
+    interval = setInterval(() => {
+      setHackedText((prevHackedText) => {
+        return prevHackedText
+          .split('')
+          .map((letter, index) => {
+            if (index < iterations) {
+              return textValue[index];
+            }
+
+            return letters[Math.floor(Math.random() * 26)];
+          })
+          .join('');
+      });
+
+      if (iterations >= textValue.length) clearInterval(interval);
+
+      iterations += 1 / 3;
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [textValue]);
+
+  return (
+    <h1 className="text-spotifyWhite text-4xl font-spaceMono">{hackedText}</h1>
+  );
+}
