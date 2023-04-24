@@ -5,10 +5,7 @@ import Mobile from '../../templates/Mobile.jsx';
 
 function HamburgerMenuSection() {
   return (
-    <Section
-      color={'bg-gradient-to-r from-canvaBlue to-canvaPurple'}
-      padding={'p-0'}
-    >
+    <Section color={'bg-gradient-to-r from-canvaBlue to-canvaPurple'}>
       <Mobile>
         <HamburgerMenuNav />
       </Mobile>

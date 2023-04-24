@@ -7,7 +7,7 @@ export default function BoxStack() {
 
   return (
     <div>
-      <motion.div className="w-52 h-52 relative">
+      <motion.div className="w-52 h-52 relative flex items-center justify-center">
         <AnimatePresence initial={false}>
           <BoxCard key={index + 1} frontCard={false} />
           <BoxCard
