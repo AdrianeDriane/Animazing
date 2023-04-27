@@ -32,6 +32,14 @@ module.exports = {
         easterWhite: '#F9F9F9',
 
         boundingRoundedBox: '#202E4E',
+
+        veryDarkPurple: '#0C0B14',
+        gradientDarkPurple: '#2E1E62',
+        gradientLightPurple: '#413372',
+        plusIconGradientDarkPurple: '#6642DB',
+        plusIconGradientLightPurple: '#907ADD',
+        staggeringIconsBackgroundGray: '#262333',
+        staggeringIconsWhite: '#D4D3D6',
       },
       fontFamily: {
         spaceMono: ['Space Mono', 'monospace'],

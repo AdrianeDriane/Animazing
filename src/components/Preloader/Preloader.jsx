@@ -9,10 +9,9 @@ export default function Preloader() {
   return (
     <motion.div
       className="h-screen w-screen z-20 absolute bg-spotifyWhite"
-      initial={{ y: 0, borderRadius: '0%' }}
+      initial={{ y: 0 }}
       animate={{
         y: -viewportHeight,
-        borderRadius: '100%',
         transition: {
           delay: 4,
           duration: 2,
@@ -22,10 +21,9 @@ export default function Preloader() {
     >
       <motion.div
         className="h-full w-full bg-spotifyGray flex items-center justify-center"
-        initial={{ x: 0, borderRadius: '0%' }}
+        initial={{ x: 0 }}
         animate={{
           x: viewportWidth,
-          borderRadius: '100%',
           transition: {
             delay: 3.5,
             duration: 1,
@@ -35,10 +33,9 @@ export default function Preloader() {
       >
         <motion.div
           className="h-full w-full bg-spotifyBlack flex items-center justify-center"
-          initial={{ y: 0, borderRadius: '0%' }}
+          initial={{ y: 0 }}
           animate={{
             y: viewportHeight,
-            borderRadius: '100%',
             transition: {
               delay: 3,
               duration: 1,

@@ -7,6 +7,7 @@ import BoxStackSection from './sections/BoxStack/BoxStackSection.jsx';
 import BottomTabSection from './sections/BottomTab/BottomTabSection.jsx';
 import { useEffect, useState } from 'react';
 import Preloader from './components/Preloader/Preloader.jsx';
+import AddButtonSection from './sections/AddButton/AddButtonSection.jsx';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,11 +32,12 @@ function App() {
       <div className="h-screen overflow-auto snap-y snap-mandatory">
         <Github />
         <MacOSDockSection />
+        <AddButtonSection />
+        <ElasticSwitchTabSection />
+        <CardsStackSection />
         <HamburgerMenuSection />
         <BottomTabSection />
         <BoxStackSection />
-        <ElasticSwitchTabSection />
-        <CardsStackSection />
       </div>
     </>
   );
