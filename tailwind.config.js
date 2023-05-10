@@ -40,6 +40,8 @@ module.exports = {
         plusIconGradientLightPurple: '#907ADD',
         staggeringIconsBackgroundGray: '#262333',
         staggeringIconsWhite: '#D4D3D6',
+
+        cloudyButtonGoldenRod: '#DAA520',
       },
       fontFamily: {
         spaceMono: ['Space Mono', 'monospace'],
@@ -62,6 +64,7 @@ module.exports = {
       },
       borderRadius: {
         mobileRound: '50px',
+        cloudyButtonSpanRound: '50%',
       },
     },
   },
