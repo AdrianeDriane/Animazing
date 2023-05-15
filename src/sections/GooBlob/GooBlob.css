@@ -1,0 +1,4 @@
+.blobs {
+  -webkit-filter: url('#goo');
+  filter: url('#goo');
+}

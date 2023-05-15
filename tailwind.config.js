@@ -42,6 +42,8 @@ module.exports = {
         staggeringIconsWhite: '#D4D3D6',
 
         cloudyButtonGoldenRod: '#DAA520',
+
+        lightCoral: '#F08080',
       },
       fontFamily: {
         spaceMono: ['Space Mono', 'monospace'],
@@ -65,6 +67,9 @@ module.exports = {
       borderRadius: {
         mobileRound: '50px',
         cloudyButtonSpanRound: '50%',
+      },
+      boxShadow: {
+        blobBoxShadow: '10px 10px 5px 0px rgba(0, 0, 0, 0.75)',
       },
     },
   },
