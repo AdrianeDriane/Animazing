@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import Preloader from './components/Preloader/Preloader.jsx';
 import AddButtonSection from './sections/AddButton/AddButtonSection.jsx';
 import CloudyButtonSection from './sections/CloudyButton/CloudyButtonSection.jsx';
+import GooBlobSection from './sections/GooBlob/GooBlobSection.jsx';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +41,7 @@ function App() {
         <BottomTabSection />
         <BoxStackSection />
         <CloudyButtonSection />
+        <GooBlobSection />
       </div>
     </>
   );
