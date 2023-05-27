@@ -10,6 +10,7 @@ import Preloader from './components/Preloader/Preloader.jsx';
 import AddButtonSection from './sections/AddButton/AddButtonSection.jsx';
 import CloudyButtonSection from './sections/CloudyButton/CloudyButtonSection.jsx';
 import GooBlobSection from './sections/GooBlob/GooBlobSection.jsx';
+import MagneticNavSection from './sections/MagneticNav/MagneticNavSection.jsx';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,7 @@ function App() {
         <BoxStackSection />
         <CloudyButtonSection />
         <GooBlobSection />
+        <MagneticNavSection />
       </div>
     </>
   );
