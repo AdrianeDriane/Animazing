@@ -26,7 +26,6 @@ export default function Disc() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      console.log('stop na');
       setIsPlaying(false);
       stop();
     }, duration);
