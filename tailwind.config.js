@@ -52,11 +52,15 @@ module.exports = {
         cardHeight: '350px',
         dockHeight: '50px',
         mobileHeight: '650px',
+        discComponentHeight: '500px',
+        discHeight: '360px',
       },
       width: {
         cardWidth: '224px',
         navigationMenuWidth: '500px',
         mobileWidth: '385px',
+        discComponentWidth: '500px',
+        discWidth: '360px',
       },
       transformOrigin: {
         'top-center': 'top center',
@@ -67,9 +71,15 @@ module.exports = {
       borderRadius: {
         mobileRound: '50px',
         cloudyButtonSpanRound: '50%',
+        playButtonRound: '27px',
       },
       boxShadow: {
         blobBoxShadow: '10px 10px 5px 0px rgba(0, 0, 0, 0.75)',
+        playButtonShadow:
+          'box-shadow: 0px 1px 2px rgba(255, 255, 255, 1), 0px 2px 1px rgba(0, 0, 0, 0.15)',
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
       },
     },
   },
