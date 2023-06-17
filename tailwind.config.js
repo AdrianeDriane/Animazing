@@ -76,7 +76,8 @@ module.exports = {
       boxShadow: {
         blobBoxShadow: '10px 10px 5px 0px rgba(0, 0, 0, 0.75)',
         playButtonShadow:
-          'box-shadow: 0px 1px 2px rgba(255, 255, 255, 1), 0px 2px 1px rgba(0, 0, 0, 0.15)',
+          '0px 1px 2px rgba(255, 255, 255, 1), 0px 2px 1px rgba(0, 0, 0, 0.15)',
+        whiteCardShadow: '0px 5px 13px 5px',
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
