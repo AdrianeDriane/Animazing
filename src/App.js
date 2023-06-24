@@ -12,6 +12,7 @@ import CloudyButtonSection from './sections/CloudyButton/CloudyButtonSection.jsx
 import GooBlobSection from './sections/GooBlob/GooBlobSection.jsx';
 import DontHearnMeSection from './sections/DontHearnMe/DontHearnMeSection.jsx';
 import WhiteCardsSection from './sections/WhiteCards/WhiteCardsSection.jsx';
+import CartonBoxSection from './sections/CartonBox/CartonBoxSection.jsx';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -46,6 +47,7 @@ function App() {
         <GooBlobSection />
         <DontHearnMeSection />
         <WhiteCardsSection />
+        <CartonBoxSection />
       </div>
     </>
   );
