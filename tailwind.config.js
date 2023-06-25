@@ -44,6 +44,10 @@ module.exports = {
         cloudyButtonGoldenRod: '#DAA520',
 
         lightCoral: '#F08080',
+
+        cartonBoxLight: '#D4A777',
+        cartonBoxDark: '#BF8B5A',
+        cartonBoxVeryLight: '#EFCD9C',
       },
       fontFamily: {
         spaceMono: ['Space Mono', 'monospace'],
@@ -54,6 +58,8 @@ module.exports = {
         mobileHeight: '650px',
         discComponentHeight: '500px',
         discHeight: '360px',
+        cartonBoxHeight: '200px',
+        cartonCoverHeight: '100px',
       },
       width: {
         cardWidth: '224px',
@@ -61,6 +67,7 @@ module.exports = {
         mobileWidth: '385px',
         discComponentWidth: '500px',
         discWidth: '360px',
+        cartonBoxWidth: '200px',
       },
       transformOrigin: {
         'top-center': 'top center',
@@ -78,6 +85,7 @@ module.exports = {
         playButtonShadow:
           '0px 1px 2px rgba(255, 255, 255, 1), 0px 2px 1px rgba(0, 0, 0, 0.15)',
         whiteCardShadow: '0px 5px 13px 5px',
+        cartonBoxShadow: '0px -200px 3px #0005',
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
