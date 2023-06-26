@@ -36,6 +36,7 @@ export default function CartonBox() {
       onMouseUp={handleMouseUp}
       onTouchStart={handleMouseDown}
       onTouchEnd={handleMouseUp}
+      draggable="false"
     >
       <div
         className="front absolute h-cartonBoxHeight w-cartonBoxWidth bg-cartonBoxDark z-50"
@@ -44,12 +45,14 @@ export default function CartonBox() {
         <img
           src={fragileLogosFirstRow}
           alt="Logos First Row"
-          className="absolute top-24 left-2"
+          className="absolute top-24 left-2 select-none"
+          draggable="false"
         />
         <img
           src={fragileLogosSecondRow}
           alt="Logos Second Row"
-          className="absolute top-36 left-2"
+          className="absolute top-36 left-2 select-none"
+          draggable="false"
         />
       </div>
 
@@ -70,14 +73,21 @@ export default function CartonBox() {
         <img
           src={scotchTape}
           alt="Scotch Tape Strip"
-          className="absolute top-0 left-20"
+          className="absolute top-0 left-20 select-none"
+          draggable="false"
         />
         <img
           src={recycleLogo}
           alt="Recycle Logo"
-          className="absolute top-36 left-2"
+          className="absolute top-36 left-2 select-none"
+          draggable="false"
         />
-        <img src={qrScanMe} alt="QR Code" className="absolute top-36 left-28" />
+        <img
+          src={qrScanMe}
+          alt="QR Code"
+          className="absolute top-36 left-28 select-none"
+          draggable="false"
+        />
       </div>
 
       <div
@@ -170,7 +180,12 @@ export default function CartonBox() {
             },
           }}
         >
-          <img src={charmander} alt="Charmander" />
+          <img
+            src={charmander}
+            alt="Charmander"
+            draggable="false"
+            className="select-none"
+          />
         </motion.div>
       </div>
     </div>
