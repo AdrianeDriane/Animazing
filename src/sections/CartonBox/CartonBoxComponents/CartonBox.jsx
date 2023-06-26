@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import useSound from 'use-sound';
 
 import recycleLogo from '../../../assets/cartonBoxSvgs/recycle_logo.svg';
 import qrScanMe from '../../../assets/cartonBoxSvgs/qr_scan_me.svg';
@@ -8,11 +9,20 @@ import fragileLogosFirstRow from '../../../assets/cartonBoxSvgs/fragile_logos_fi
 import fragileLogosSecondRow from '../../../assets/cartonBoxSvgs/fragile_logos_secondrow.svg';
 import charmander from '../../../assets/cartonBoxSvgs/charmander.svg';
 
+import whosThatPokemon from '../../../assets/whos_that_pokemon.mp3';
+
 export default function CartonBox() {
   const [isHeld, setIsHeld] = useState(false);
+  const [play, { stop }] = useSound(whosThatPokemon);
 
-  const handleMouseDown = () => setIsHeld(true);
-  const handleMouseUp = () => setIsHeld(false);
+  const handleMouseDown = () => {
+    setIsHeld(true);
+    play();
+  };
+  const handleMouseUp = () => {
+    setIsHeld(false);
+    stop();
+  };
 
   return (
     <div
@@ -86,7 +96,7 @@ export default function CartonBox() {
             transition: {
               type: 'spring',
               damping: 20,
-              delay: 0.5,
+              delay: 1,
             },
           }}
         >
@@ -156,7 +166,7 @@ export default function CartonBox() {
               : 'translateY(0px) translateX(-50px)',
             transition: {
               type: 'spring',
-              delay: isHeld ? 1 : 0,
+              delay: isHeld ? 2 : 0,
             },
           }}
         >
