@@ -8,17 +8,16 @@ export default function CloudyButton({ text }) {
 
   return (
     <motion.li
-      className="text-cloudyButtonGoldenRod text-base border-4 
-    rounded-lg border-solid border-cloudyButtonGoldenRod w-48 h-12 uppercase font-bold font-sans tracking-widest 
+      className="text-[#453c17] text-base border-4 
+    rounded-lg border-solid border-[#453c17] w-48 h-12 uppercase font-bold font-sans tracking-widest 
     text-center leading-10 relative 
-    overflow-hidden z-10 m-4"
+    overflow-hidden z-10 m-4 hover:cursor-pointer"
       initial={{
         color: '#DAA520',
       }}
-      onMouseOver={() => setIsHovered(true)}
-      onMouseOut={() => setIsHovered(false)}
+      onClick={() => setIsHovered((prevVal) => !prevVal)}
       animate={{
-        color: isHovered ? '#000000' : '#DAA520',
+        color: isHovered ? '#ffd11a' : '#453c17',
       }}
     >
       {text}
