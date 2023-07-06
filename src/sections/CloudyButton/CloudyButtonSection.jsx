@@ -6,7 +6,7 @@ export default function CloudyButtonSection() {
   const list = ['home', 'products', 'services', 'contact'];
 
   return (
-    <Section color="bg-black">
+    <Section color="bg-[#ffd11a]">
       <ul className="list-none m-0 p-0">
         {list.map((item, index) => (
           <CloudyButton key={index} text={item} />

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function CloudyButtonSpan({ n, isHovered }) {
   return (
     <motion.span
-      className="absolute w-1/4 h-full bg-cloudyButtonGoldenRod rounded-cloudyButtonSpanRound -z-10"
+      className="absolute w-1/4 h-full bg-[#453c17] rounded-cloudyButtonSpanRound -z-10"
       style={{
         left: `${(n - 1) * 25}%`,
       }}
