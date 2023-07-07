@@ -24,7 +24,7 @@ export default function BottomTabBar({ isTabSelected, setIsTabSelected }) {
   );
 
   return (
-    <div className="h-20 w-full bg-boundingRoundedBox flex items-center justify-evenly px-10 rounded-t-2xl sm:px-20 ">
+    <div className="h-20 w-full bg-boundingRoundedBox flex items-center justify-evenly px-10 rounded-t-2xl sm:rounded-t-none sm:px-20 ">
       {tabs.map(({ name, color }, id) => (
         <motion.div
           className="h-8 relative flex flex-row items-center justify-center px-4 m-0 font-sans text-xl font-bold text-spotifyWhite rounded-3xl cursor-pointer"
