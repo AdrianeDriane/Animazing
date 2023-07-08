@@ -4,10 +4,10 @@ import bell_curve from '../assets/bell_curve.png';
 import TabIcons from '../../ElasticSwitchTab/TabIcons.jsx';
 
 const tabs = [
-  { name: 'Home', color: '#FCBAD3' },
-  { name: 'Liked', color: '#AEDDCD' },
-  { name: 'Library', color: '#A8D8EA' },
-  { name: 'Playlist', color: '#AA96DA' },
+  { name: 'Home', color: '#1D9BF0' },
+  { name: 'Liked', color: '#7856FF' },
+  { name: 'Library', color: '#00BA7C' },
+  { name: 'Playlist', color: '#F91880' },
 ];
 
 export default function BottomTabBar({ isTabSelected, setIsTabSelected }) {
@@ -24,7 +24,7 @@ export default function BottomTabBar({ isTabSelected, setIsTabSelected }) {
   );
 
   return (
-    <div className="h-20 w-full bg-boundingRoundedBox flex items-center justify-evenly px-10 rounded-t-2xl sm:rounded-t-none sm:px-20 ">
+    <div className="h-20 w-full bg-boundingRoundedBox flex items-center justify-evenly px-10 rounded-t-none sm:px-20 ">
       {tabs.map(({ name, color }, id) => (
         <motion.div
           className="h-8 relative flex flex-row items-center justify-center px-4 m-0 font-sans text-xl font-bold text-spotifyWhite rounded-3xl cursor-pointer"

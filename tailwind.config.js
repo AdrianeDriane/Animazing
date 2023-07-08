@@ -31,6 +31,12 @@ module.exports = {
         easterGreen: '#AEDDCD',
         easterWhite: '#F9F9F9',
 
+        twitterDim: '#15202B',
+        twitterBlue: '#1D9BF0',
+        twitterPurple: '#7856FF',
+        twitterCyan: '#00BA7C',
+        twitterPink: '#F91880',
+
         boundingRoundedBox: '#202E4E',
 
         veryDarkPurple: '#0C0B14',
