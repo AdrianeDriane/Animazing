@@ -4,10 +4,10 @@ import bell_curve from '../assets/bell_curve.png';
 import TabIcons from '../../ElasticSwitchTab/TabIcons.jsx';
 
 const tabs = [
-  { name: 'Home', color: '#FCBAD3' },
-  { name: 'Liked', color: '#AEDDCD' },
-  { name: 'Library', color: '#A8D8EA' },
-  { name: 'Playlist', color: '#AA96DA' },
+  { name: 'Home', color: '#1D9BF0' },
+  { name: 'Liked', color: '#7856FF' },
+  { name: 'Library', color: '#00BA7C' },
+  { name: 'Playlist', color: '#F91880' },
 ];
 
 export default function BottomTabBar({ isTabSelected, setIsTabSelected }) {

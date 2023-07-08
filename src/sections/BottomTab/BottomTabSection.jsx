@@ -8,18 +8,18 @@ export default function BottomTabSection() {
 
   function backgroundColor(isTabSelected) {
     if (isTabSelected === 0) {
-      return 'bg-easterPink';
+      return 'bg-twitterBlue';
     } else if (isTabSelected === 1) {
-      return 'bg-easterGreen';
+      return 'bg-twitterPurple';
     } else if (isTabSelected === 2) {
-      return 'bg-easterBlue';
+      return 'bg-twitterCyan';
     } else if (isTabSelected === 3) {
-      return 'bg-easterPurple';
+      return 'bg-twitterPink';
     }
   }
 
   return (
-    <Section color="bg-easterWhite">
+    <Section color="bg-twitterDim">
       <Mobile
         color={backgroundColor(isTabSelected)}
         align="items-end"
