@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       {preloaderHandler()}
-      <div className="h-screen overflow-auto snap-y snap-mandatory">
+      <div className="h-screen overflow-auto snap-y snap-mandatory selection:bg-none">
         <Github />
         <MacOSDockSection />
         <AddButtonSection />

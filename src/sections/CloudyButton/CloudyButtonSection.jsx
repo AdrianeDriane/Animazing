@@ -3,10 +3,10 @@ import Section from '../../templates/Section.jsx';
 import CloudyButton from './CloudyButtonComponents/CloudyButton.jsx';
 
 export default function CloudyButtonSection() {
-  const list = ['home', 'products', 'services', 'contact'];
+  const list = ['eat', 'sleep', 'gym', 'code'];
 
   return (
-    <Section color="bg-[#ffd11a]">
+    <Section color="bg-[#e4ecfa]">
       <ul className="list-none m-0 p-0">
         {list.map((item, index) => (
           <CloudyButton key={index} text={item} />
