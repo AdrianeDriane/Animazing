@@ -6,9 +6,11 @@ import {
   useTransform,
   useAnimationControls,
 } from 'framer-motion';
+import useSound from 'use-sound';
 import { useMouse } from '../mouse/MouseProvider.jsx';
 import { useDock } from './Dock.jsx';
 import PropTypes from 'prop-types';
+import boopSound from '../../../assets/boopSound.mp3';
 
 const DOCK_ITEM_SIZE = 50;
 const INCREASE_AMP_BY = 40;
@@ -20,6 +22,7 @@ export default function DockItem({ children, onClick }) {
   const [dockCenterX, setDockCenterX] = useState(null);
   const [isDockItemOpened, setIsDockItemOpened] = useState(false);
   const controls = useAnimationControls();
+  const [play] = useSound(boopSound);
 
   //As the mouse moves horizontally over the element,
   //the dimension value will change based on a curve that rises and
@@ -69,6 +72,7 @@ export default function DockItem({ children, onClick }) {
     <motion.li
       className="relative"
       onClick={() => {
+        play();
         if (!isDockItemOpened) {
           setIsDockItemOpened(true);
           controls.start(() => ({ translateY: [0, -20, 0] }));
