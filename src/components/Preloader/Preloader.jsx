@@ -8,7 +8,7 @@ export default function Preloader() {
 
   return (
     <motion.div
-      className="h-screen w-screen z-20 absolute bg-spotifyWhite"
+      className="h-screen w-screen z-20 absolute bg-twitterDim"
       initial={{ y: 0 }}
       animate={{
         y: -viewportHeight,
@@ -20,7 +20,7 @@ export default function Preloader() {
       }}
     >
       <motion.div
-        className="h-full w-full bg-spotifyGray flex items-center justify-center"
+        className="h-full w-full bg-spotifyBlack flex items-center justify-center"
         initial={{ x: 0 }}
         animate={{
           x: viewportWidth,
@@ -32,7 +32,7 @@ export default function Preloader() {
         }}
       >
         <motion.div
-          className="h-full w-full bg-spotifyBlack flex items-center justify-center"
+          className="h-full w-full bg-macOSBg flex items-center justify-center"
           initial={{ y: 0 }}
           animate={{
             y: viewportHeight,
