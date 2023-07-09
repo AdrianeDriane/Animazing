@@ -5,9 +5,9 @@ import BoxStack from './BoxStackComponents/BoxStack.jsx';
 
 export default function BoxStackSection() {
   return (
-    <Section color="bg-easterBlue">
+    <Section color="bg-[#ff7a00]">
       <Mobile
-        color="bg-easterBlue"
+        color="bg-[#ff7a00]"
         align="items-center"
         justify="justify-center"
       >
