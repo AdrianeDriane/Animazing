@@ -13,7 +13,7 @@ export default function GooBlobSection() {
   };
 
   return (
-    <Section color="bg-white">
+    <Section color="bg-[#f1dbdb]">
       <div className="blobs flex relative h-full w-full" onClick={handleClick}>
         <Blob
           height="h-32"
