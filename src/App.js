@@ -38,16 +38,16 @@ function App() {
         <Github />
         <MacOSDockSection />
         <AddButtonSection />
+        <BottomTabSection />
+        <HamburgerMenuSection />
+        <BoxStackSection />
         <ElasticSwitchTabSection />
         <CardsStackSection />
-        <HamburgerMenuSection />
-        <BottomTabSection />
-        <BoxStackSection />
+        <CartonBoxSection />
+        <DontHearnMeSection />
         <CloudyButtonSection />
         <GooBlobSection />
-        <DontHearnMeSection />
         <WhiteCardsSection />
-        <CartonBoxSection />
       </div>
     </>
   );
