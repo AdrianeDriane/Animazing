@@ -4,25 +4,22 @@ import CloudyButtonSpan from './CloudyButtonSpan';
 import { motion } from 'framer-motion';
 
 export default function CloudyButton({ text }) {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <motion.li
-      className="text-[#453c17] text-base border-4 
-    rounded-lg border-solid border-[#453c17] w-48 h-12 uppercase font-bold font-sans tracking-widest 
+      className="text-[#ffffff] text-base border-4 
+    rounded-lg border-solid border-[#275efe] w-48 h-12 uppercase font-bold font-sans tracking-widest 
     text-center leading-10 relative 
-    overflow-hidden z-10 m-4 hover:cursor-pointer"
-      initial={{
-        color: '#DAA520',
-      }}
-      onClick={() => setIsHovered((prevVal) => !prevVal)}
+    overflow-hidden z-10 m-4 hover:cursor-pointer bg-[#becdfa]"
+      onClick={() => setIsClicked((prevVal) => !prevVal)}
       animate={{
-        color: isHovered ? '#ffd11a' : '#453c17',
+        color: isClicked ? '#ffffff' : '#275efe',
       }}
     >
       {text}
       {[...Array(4)].map((_, i) => (
-        <CloudyButtonSpan key={i} n={i + 1} isHovered={isHovered} />
+        <CloudyButtonSpan key={i} n={i + 1} isClicked={isClicked} />
       ))}
     </motion.li>
   );
