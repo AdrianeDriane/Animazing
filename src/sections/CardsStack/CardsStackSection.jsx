@@ -33,7 +33,7 @@ function CardsStackSection() {
   };
 
   return (
-    <Section color="bg-royalPurple">
+    <Section color="bg-[#db6044]">
       <div className="relative flex items-center justify-center h-screen">
         <ul className="relative w-cardWidth h-cardHeight">
           {cards.map((image, index) => {
@@ -57,7 +57,7 @@ function CardsStackSection() {
                 onDragEnd={() => moveToEnd(index)}
                 className="absolute w-cardWidth h-cardHeight rounded-lg origin-top-center 
                 list-none bg-no-repeat bg-center bg-cardBgColor 
-                cursor-grab shadow-2xl shadow-slate-600"
+                cursor-grab shadow-2xl shadow-slate-80000"
               />
             );
           })}
