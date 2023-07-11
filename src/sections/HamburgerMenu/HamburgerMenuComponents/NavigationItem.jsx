@@ -1,12 +1,16 @@
 import { motion } from 'framer-motion';
-import { navigationItemVariants } from '../utils/navigationItemVariants.js';
 import PropTypes from 'prop-types';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { AiOutlineMessage } from 'react-icons/ai';
 import { FiMail } from 'react-icons/fi';
 import { RxPerson } from 'react-icons/rx';
+import useSound from 'use-sound';
 
+import clickSound from '../../../assets/clickSound.mp3';
+import { navigationItemVariants } from '../utils/navigationItemVariants.js';
 export default function NavigationItem({ text }) {
+  const [play] = useSound(clickSound);
+
   function iconBasedOnText(text) {
     text = text.toLowerCase();
     if (text === 'home') {
@@ -23,6 +27,9 @@ export default function NavigationItem({ text }) {
   return (
     <motion.li
       variants={navigationItemVariants}
+      onClick={() => {
+        play();
+      }}
       whileTap={{ scale: 0.9 }}
       className="m-0 p-0 list-none mb-5 flex items-center cursor-pointer"
     >

@@ -1,11 +1,16 @@
 import React, { useRef } from 'react';
 import { motion, useCycle } from 'framer-motion';
+import useSound from 'use-sound';
+
+import bleepSound from '../../../assets/bleepSound.mp3';
 import { hamburgerMenuNavVariants } from '../utils/hamburgerMenuNavVariants.js';
 import { useDimensions } from '../utils/useDimensions.js';
 import Navigation from './Navigation.jsx';
 import HamburgerIcon from './HamburgerIcon.jsx';
 
 export default function HamburgerMenuNav() {
+  const [play] = useSound(bleepSound);
+
   const [isOpen, toggleIsOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -26,6 +31,7 @@ export default function HamburgerMenuNav() {
       <HamburgerIcon
         isOpen={isOpen}
         toggle={() => {
+          play();
           toggleIsOpen();
         }}
       />
