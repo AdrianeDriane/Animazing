@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import useSound from 'use-sound';
+
+import blobSound from '../../assets/blobSound.mp3';
 import Section from '../../templates/Section.jsx';
 import './GooBlob.css';
 import Blob from './GooBlobComponents/Blob.jsx';
@@ -7,7 +10,10 @@ export default function GooBlobSection() {
   const [blobLocationX, setBlobLocationX] = useState(0);
   const [blobLocationY, setBlobLocationY] = useState(0);
 
+  const [play] = useSound(blobSound);
+
   const handleClick = (event) => {
+    play();
     setBlobLocationX(event.clientX);
     setBlobLocationY(event.clientY);
   };
