@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import useSound from 'use-sound';
+
+import cardSlideSound from '../../assets/cardSlideSound.mp3';
 import Section from '../../templates/Section';
 import WhiteCard from './WhiteCardsComponents/WhiteCard';
 
 export default function WhiteCardsSection() {
+  const [play] = useSound(cardSlideSound);
   const [isSpread, setIsSpread] = useState(false);
 
   function toggleIsSpread() {
@@ -16,7 +20,10 @@ export default function WhiteCardsSection() {
         style={{
           transform: 'perspective(900px) rotateX(45deg) translateZ(0px)',
         }}
-        onClick={toggleIsSpread}
+        onClick={() => {
+          play();
+          toggleIsSpread();
+        }}
       >
         {[-35, -19, 5, 29, 45].map((value, index) => (
           <WhiteCard

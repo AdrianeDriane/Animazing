@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import useSound from 'use-sound';
 
 import Section from '../../templates/Section.jsx';
 
@@ -10,6 +11,8 @@ import eight_spades from './assets/card_images/eight_spades.png';
 import king_diamonds from './assets/card_images/king_diamonds.png';
 import queen_diamonds from './assets/card_images/queen_diamonds.png';
 import unflipped_card from './assets/card_images/unflipped_card.png';
+
+import paperFlipSound from '../../assets/paperFlipSound.mp3';
 
 const CARD_OFFSET = 10;
 const SCALE_FACTOR = 0.06;
@@ -23,6 +26,7 @@ const CARD_IMAGES = [
 ];
 
 function CardsStackSection() {
+  const [play] = useSound(paperFlipSound);
   const [cards, setCards] = useState(CARD_IMAGES);
 
   const moveToEnd = (from) => {
@@ -54,6 +58,7 @@ function CardsStackSection() {
                   top: 0,
                   bottom: 0,
                 }}
+                onDragStart={play}
                 onDragEnd={() => moveToEnd(index)}
                 className="absolute w-cardWidth h-cardHeight rounded-lg origin-top-center 
                 list-none bg-no-repeat bg-center bg-cardBgColor 

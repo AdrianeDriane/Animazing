@@ -1,8 +1,12 @@
 import { useMotionValue, useTransform } from 'framer-motion';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import useSound from 'use-sound';
+
+import paperFlipSound from '../../../assets/paperFlipSound.mp3';
 
 export default function BoxCard({ drag, frontCard, index, setIndex }) {
+  const [play] = useSound(paperFlipSound);
   const [horizontalExit, setHorizontalExit] = useState(0);
 
   const x = useMotionValue(0);
@@ -40,6 +44,7 @@ export default function BoxCard({ drag, frontCard, index, setIndex }) {
       }}
       drag={drag}
       dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+      onDragStart={play}
       onDragEnd={handleDragEnd}
       variants={frontCard ? variantsFrontCard : variantsBackCard}
       initial="initial"
