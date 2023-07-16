@@ -5,8 +5,11 @@ import useSound from 'use-sound';
 
 import paperFlipSound from '../../../assets/paperFlipSound.mp3';
 
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
+
 export default function BoxCard({ drag, frontCard, index, setIndex }) {
-  const [play] = useSound(paperFlipSound);
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(paperFlipSound, { volume: isSoundMuted ? 0 : 1 });
   const [horizontalExit, setHorizontalExit] = useState(0);
 
   const x = useMotionValue(0);

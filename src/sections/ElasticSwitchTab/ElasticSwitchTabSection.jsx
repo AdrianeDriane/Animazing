@@ -6,6 +6,8 @@ import clickSound from '../../assets/clickSound.mp3';
 import Section from '../../templates/Section.jsx';
 import TabIcons from './TabIcons.jsx';
 
+import { useSoundContext } from '../../components/SoundToggle/soundContext.js';
+
 const tabs = [
   { name: 'Home' },
   { name: 'Liked' },
@@ -14,7 +16,8 @@ const tabs = [
 ];
 
 export default function ElasticSwitchTabSection() {
-  const [play] = useSound(clickSound);
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(clickSound, { volume: isSoundMuted ? 0 : 1 });
 
   const [isSelected, setIsSelected] = useState(0);
 

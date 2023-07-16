@@ -8,7 +8,7 @@ export default function Preloader() {
 
   return (
     <motion.div
-      className="h-screen w-screen z-20 absolute bg-twitterDim"
+      className="h-screen w-screen z-50 absolute bg-twitterDim"
       initial={{ y: 0 }}
       animate={{
         y: -viewportHeight,

@@ -14,6 +14,8 @@ import unflipped_card from './assets/card_images/unflipped_card.png';
 
 import paperFlipSound from '../../assets/paperFlipSound.mp3';
 
+import { useSoundContext } from '../../components/SoundToggle/soundContext.js';
+
 const CARD_OFFSET = 10;
 const SCALE_FACTOR = 0.06;
 const CARD_IMAGES = [
@@ -26,7 +28,8 @@ const CARD_IMAGES = [
 ];
 
 function CardsStackSection() {
-  const [play] = useSound(paperFlipSound);
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(paperFlipSound, { volume: isSoundMuted ? 0 : 1 });
   const [cards, setCards] = useState(CARD_IMAGES);
 
   const moveToEnd = (from) => {

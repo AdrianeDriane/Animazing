@@ -4,9 +4,11 @@ import useSound from 'use-sound';
 import cardSlideSound from '../../assets/cardSlideSound.mp3';
 import Section from '../../templates/Section';
 import WhiteCard from './WhiteCardsComponents/WhiteCard';
+import { useSoundContext } from '../../components/SoundToggle/soundContext.js';
 
 export default function WhiteCardsSection() {
-  const [play] = useSound(cardSlideSound);
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(cardSlideSound, { volume: isSoundMuted ? 0 : 1 });
   const [isSpread, setIsSpread] = useState(false);
 
   function toggleIsSpread() {

@@ -5,6 +5,7 @@ import useSound from 'use-sound';
 import clickSound from '../../../assets/clickSound.mp3';
 import bell_curve from '../assets/bell_curve.png';
 import TabIcons from '../../ElasticSwitchTab/TabIcons.jsx';
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
 
 const tabs = [
   { name: 'Home', color: '#1D9BF0' },
@@ -14,7 +15,8 @@ const tabs = [
 ];
 
 export default function BottomTabBar({ isTabSelected, setIsTabSelected }) {
-  const [play] = useSound(clickSound);
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(clickSound, { volume: isSoundMuted ? 0 : 1 });
 
   const boundingRoundedBox = useMemo(
     () => (

@@ -10,8 +10,11 @@ import { GiBatteredAxe } from 'react-icons/gi';
 
 import bumpSound from '../../../assets/bumpSound.mp3';
 
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
+
 export default function RightStaggerIcons({ isButtonOpened }) {
-  const [play] = useSound(bumpSound);
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(bumpSound, { volume: isSoundMuted ? 0 : 1 });
 
   const rightIconsVariant = {
     initial: {

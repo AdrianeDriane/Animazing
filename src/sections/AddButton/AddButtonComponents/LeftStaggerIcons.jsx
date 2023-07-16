@@ -10,8 +10,11 @@ import { AiFillBuild } from 'react-icons/ai';
 
 import bumpSound from '../../../assets/bumpSound.mp3';
 
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
+
 export default function LeftStaggerIcons({ isButtonOpened }) {
-  const [play] = useSound(bumpSound);
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(bumpSound, { volume: isSoundMuted ? 0 : 1 });
 
   const leftIconsVariant = {
     initial: {

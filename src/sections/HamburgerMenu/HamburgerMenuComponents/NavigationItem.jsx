@@ -8,8 +8,10 @@ import useSound from 'use-sound';
 
 import clickSound from '../../../assets/clickSound.mp3';
 import { navigationItemVariants } from '../utils/navigationItemVariants.js';
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
 export default function NavigationItem({ text }) {
-  const [play] = useSound(clickSound);
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(clickSound, { volume: isSoundMuted ? 0 : 1 });
 
   function iconBasedOnText(text) {
     text = text.toLowerCase();

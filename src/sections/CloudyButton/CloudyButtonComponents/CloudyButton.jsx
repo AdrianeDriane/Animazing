@@ -5,9 +5,12 @@ import useSound from 'use-sound';
 
 import CloudyButtonSpan from './CloudyButtonSpan';
 import clickSound from '../../../assets/clickSound.mp3';
+
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
 export default function CloudyButton({ text }) {
+  const isSoundMuted = useSoundContext();
   const [isClicked, setIsClicked] = useState(false);
-  const [play] = useSound(clickSound);
+  const [play] = useSound(clickSound, { volume: isSoundMuted ? 0 : 1 });
 
   return (
     <motion.li

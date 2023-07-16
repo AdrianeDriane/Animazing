@@ -7,9 +7,11 @@ import { hamburgerMenuNavVariants } from '../utils/hamburgerMenuNavVariants.js';
 import { useDimensions } from '../utils/useDimensions.js';
 import Navigation from './Navigation.jsx';
 import HamburgerIcon from './HamburgerIcon.jsx';
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
 
 export default function HamburgerMenuNav() {
-  const [play] = useSound(bleepSound);
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(bleepSound, { volume: isSoundMuted ? 0 : 1 });
 
   const [isOpen, toggleIsOpen] = useCycle(false, true);
   const containerRef = useRef(null);

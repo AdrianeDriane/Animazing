@@ -7,10 +7,13 @@ import AddIconAnimation from './AddButtonComponents/AddIconAnimation.jsx';
 import LeftStaggerIcons from './AddButtonComponents/LeftStaggerIcons.jsx';
 import RightStaggerIcons from './AddButtonComponents/RightStaggerIcons.jsx';
 import rotateSound from '../../assets/rotateSound.mp3';
+import { useSoundContext } from '../../components/SoundToggle/soundContext.js';
 
 export default function AddButtonSection() {
+  const isSoundMuted = useSoundContext();
+
   const [isButtonOpened, cycleIsButtonOpened] = useCycle(false, true);
-  const [play] = useSound(rotateSound);
+  const [play] = useSound(rotateSound, { volume: isSoundMuted ? 0 : 1 });
 
   return (
     <Section color="bg-veryDarkPurple">

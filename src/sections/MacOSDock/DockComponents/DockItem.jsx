@@ -11,18 +11,21 @@ import { useMouse } from '../mouse/MouseProvider.jsx';
 import { useDock } from './Dock.jsx';
 import PropTypes from 'prop-types';
 import boopSound from '../../../assets/boopSound.mp3';
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
 
 const DOCK_ITEM_SIZE = 50;
 const INCREASE_AMP_BY = 40;
 
 export default function DockItem({ children, onClick }) {
+  const isSoundMuted = useSoundContext();
+
   const ref = useRef(null);
   const mouse = useMouse();
   const dock = useDock();
   const [dockCenterX, setDockCenterX] = useState(null);
   const [isDockItemOpened, setIsDockItemOpened] = useState(false);
   const controls = useAnimationControls();
-  const [play] = useSound(boopSound);
+  const [play] = useSound(boopSound, { volume: isSoundMuted ? 0 : 1 });
 
   //As the mouse moves horizontally over the element,
   //the dimension value will change based on a curve that rises and
