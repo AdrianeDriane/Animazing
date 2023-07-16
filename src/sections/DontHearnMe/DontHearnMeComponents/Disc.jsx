@@ -7,10 +7,14 @@ import useSound from 'use-sound';
 
 import gigachad from '../../../assets/gigachad.png';
 import dontHearnMe from '../../../assets/babyDontHearnMe.mp3';
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
 
 export default function Disc() {
+  const isSoundMuted = useSoundContext();
   const [isPlaying, setIsPlaying] = useState(false);
-  const [play, { pause, duration, stop }] = useSound(dontHearnMe);
+  const [play, { pause, duration, stop }] = useSound(dontHearnMe, {
+    volume: isSoundMuted ? 0 : 1,
+  });
 
   const toggleIsPlaying = () => {
     setIsPlaying((prevIsPlaying) => !prevIsPlaying);

@@ -1,8 +1,12 @@
-import React from 'react';
-import Section from '../../templates/Section.jsx';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import useSound from 'use-sound';
+
+import clickSound from '../../assets/clickSound.mp3';
+import Section from '../../templates/Section.jsx';
 import TabIcons from './TabIcons.jsx';
+
+import { useSoundContext } from '../../components/SoundToggle/soundContext.js';
 
 const tabs = [
   { name: 'Home' },
@@ -12,6 +16,9 @@ const tabs = [
 ];
 
 export default function ElasticSwitchTabSection() {
+  const isSoundMuted = useSoundContext();
+  const [play] = useSound(clickSound, { volume: isSoundMuted ? 0 : 1 });
+
   const [isSelected, setIsSelected] = useState(0);
 
   return (
@@ -22,6 +29,7 @@ export default function ElasticSwitchTabSection() {
             className="h-8 relative flex flex-row items-center justify-center px-4 m-0 font-sans text-xl font-bold text-spotifyWhite rounded-3xl cursor-pointer"
             key={id}
             onTap={() => {
+              play();
               setIsSelected(id);
             }}
           >

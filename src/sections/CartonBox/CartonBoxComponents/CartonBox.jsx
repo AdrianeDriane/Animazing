@@ -11,9 +11,14 @@ import charmander from '../../../assets/cartonBoxSvgs/charmander.svg';
 
 import whosThatPokemon from '../../../assets/whos_that_pokemon.mp3';
 
+import { useSoundContext } from '../../../components/SoundToggle/soundContext.js';
+
 export default function CartonBox() {
+  const isSoundMuted = useSoundContext();
   const [isHeld, setIsHeld] = useState(false);
-  const [play, { stop }] = useSound(whosThatPokemon);
+  const [play, { stop }] = useSound(whosThatPokemon, {
+    volume: isSoundMuted ? 0 : 1,
+  });
 
   const handleMouseDown = () => {
     setIsHeld(true);
